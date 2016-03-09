@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shannanhong.github.io/"/>
-  <updated>2016-03-08T15:11:25.000Z</updated>
+  <updated>2016-03-09T12:53:14.000Z</updated>
   <id>http://shannanhong.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java的优势</title>
+    <link href="http://shannanhong.github.io/2016/03/09/java%E7%9A%84%E4%BC%98%E5%8A%BF/"/>
+    <id>http://shannanhong.github.io/2016/03/09/java的优势/</id>
+    <published>2016-03-09T12:28:39.000Z</published>
+    <updated>2016-03-09T12:53:14.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;现实世界中正在用Java解决的难题&quot;&gt;&lt;a href=&quot;#现实世界中正在用Java解决的难题&quot; class=&quot;headerlink&quot; title=&quot;现实世界中正在用Java解决的难题&quot;&gt;&lt;/a&gt;现实世界中正在用Java解决的难题&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;服务器端、大数据、大型网站、Twitter后端就是使用Java语言。这些就是Java最耀眼的领域。物联网、Android移动平台，你可以使用同一种语言来编写移动端和大数据服务器。&lt;/li&gt;
+&lt;li&gt;Pre-cloud融合虚拟化和商用硬件逐渐融入云端。可以方便快捷地创建一个计算机网络，而不用考虑软件。先创建一个本地环境，然后推送到需要使用它的地方。分布式计算系统，能够更加迅速在AWS上活跃起来。&lt;/li&gt;
+&lt;li&gt;Java已经很完善了，任何地方都能看到它的身影。甚至可以再嵌入式系统中找到它了。这是一个伟大的软件开发语言，它解决了在软件开发中的管理问题，能够轻松的完成一些事情，而且很容易找到开发人员。&lt;/li&gt;
+&lt;li&gt;Java是最安全、最稳定且可扩展的企业软件。Twitter从Ruby转移到Scala和Java，就是因为其扩展性、稳定性和编程速度。&lt;/li&gt;
+&lt;li&gt;Java平台对于处理复杂任务非常高效。能够在各种平台上运行。Java可以在不同的硬件平台上工作。&lt;/li&gt;
+&lt;li&gt;自1995年发布以来就没有什么重大的改变。这是一个非常稳定的企业软件。从物联网和移动端又让我们看到Java能解决更多不同问题。Java更适合长远的发展，而不是快速发展。&lt;/li&gt;
+&lt;li&gt;Java有最大的代码库。它几乎可以用于任何地方，从物联网到服务器，无处不在。人们往往看不到这一点。他们以为所有级别的东西都是用C或C++编写的。他们觉得服务器页面在互联网上应该获得更多的关注，像使用Cobol编写运行的金融系统后台。 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Java影响着Android OS、Amazon Kindle 以及企业数据库和大数据处理（Hadoop 和Cassandra 都是用 Java编写的，Spark 使用Scala编写的，一种JVM语言）。安全性、稳定性、可扩展都是Java平台的特点（如实时交易）。由于其性能、稳定性、并能够跨平台，所以你可以在windows 或 OSX平台上用Java开发。&lt;/li&gt;
+&lt;li&gt;在企业服务器端广泛使用，特别是大型、面向数据库的系统、涉及多服务多平台之间的集成以及分布式事务。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;现实世界中正在用Java解决的难题&quot;&gt;&lt;a href=&quot;#现实世界中正在用Java解决的难题&quot; class=&quot;headerlink&quot; title=&quot;现实世界中正在用Java解决的难题&quot;&gt;&lt;/a&gt;现实世界中正在用Java解决的难题&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;服务器端、大数据、大型网站、Twitter后端就是使用Java语言。这些就是Java最耀眼的领域。物联网、Android移动平台，你可以使用同一种语言来编写移动端和大数据服务器。&lt;/li&gt;
+&lt;li&gt;Pre-cloud融合虚拟化和商用硬件逐渐融入云端。可以方便快捷地创建一个计算机网络，而不用考虑软件。先创建一个本地环境，然后推送到需要使用它的地方。分布式计算系统，能够更加迅速在AWS上活跃起来。&lt;/li&gt;
+&lt;li&gt;Java已经很完善了，任何地方都能看到它的身影。甚至可以再嵌入式系统中找到它了。这是一个伟大的软件开发语言，它解决了在软件开发中的管理问题，能够轻松的完成一些事情，而且很容易找到开发人员。&lt;/li&gt;
+&lt;li&gt;Java是最安全、最稳定且可扩展的企业软件。Twitter从Ruby转移到Scala和Java，就是因为其扩展性、稳定性和编程速度。&lt;/li&gt;
+&lt;li&gt;Java平台对于处理复杂任务非常高效。能够在各种平台上运行。Java可以在不同的硬件平台上工作。&lt;/li&gt;
+&lt;li&gt;自1995年发布以来就没有什么重大的改变。这是一个非常稳定的企业软件。从物联网和移动端又让我们看到Java能解决更多不同问题。Java更适合长远的发展，而不是快速发展。&lt;/li&gt;
+&lt;li&gt;Java有最大的代码库。它几乎可以用于任何地方，从物联网到服务器，无处不在。人们往往看不到这一点。他们以为所有级别的东西都是用C或C++编写的。他们觉得服务器页面在互联网上应该获得更多的关注，像使用Cobol编写运行的金融系统后台。
+    
+    </summary>
+    
+      <category term="java" scheme="http://shannanhong.github.io/categories/java/"/>
+    
+    
+      <category term="语言" scheme="http://shannanhong.github.io/tags/%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>我喜欢河妍秀</title>
