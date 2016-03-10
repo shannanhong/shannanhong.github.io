@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shannanhong.github.io/"/>
-  <updated>2016-03-09T12:53:14.000Z</updated>
+  <updated>2016-03-10T15:58:19.000Z</updated>
   <id>http://shannanhong.github.io/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>java的优势</title>
-    <link href="http://shannanhong.github.io/2016/03/09/java%E7%9A%84%E4%BC%98%E5%8A%BF/"/>
-    <id>http://shannanhong.github.io/2016/03/09/java的优势/</id>
+    <title>初识DFA算法</title>
+    <link href="http://shannanhong.github.io/2016/03/10/DFA-algorithm/"/>
+    <id>http://shannanhong.github.io/2016/03/10/DFA-algorithm/</id>
+    <published>2016-03-10T14:51:29.000Z</published>
+    <updated>2016-03-10T15:58:19.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Java实现DFA算法实现敏感词过滤&quot;&gt;&lt;a href=&quot;#Java实现DFA算法实现敏感词过滤&quot; class=&quot;headerlink&quot; title=&quot;Java实现DFA算法实现敏感词过滤&quot;&gt;&lt;/a&gt;Java实现DFA算法实现敏感词过滤&lt;/h2&gt;&lt;h3 id=&quot;今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o-╯□╰-o，但是Google知道。&quot;&gt;&lt;a href=&quot;#今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o-╯□╰-o，但是Google知道。&quot; class=&quot;headerlink&quot; title=&quot;今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o(╯□╰)o，但是Google知道。&quot;&gt;&lt;/a&gt;今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o(╯□╰)o，但是Google知道。&lt;/h3&gt;&lt;p&gt;下面代码是用于加深理解&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;读取敏感词库，将敏感词放入HashSet中，构建一个DFA算法模型：&amp;lt;br&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    中 = &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         isEnd = 0 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         国 = &amp;#123;&amp;lt;br&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              isEnd = 1 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              人 = &amp;#123;isEnd = 0 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                   民 = &amp;#123;isEnd = 1&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                   &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              男  = &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                     isEnd = 0 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                      人 = &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                           isEnd = 1 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                          &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                  &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;(～﹃～)~zZ 明天再写。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Java实现DFA算法实现敏感词过滤&quot;&gt;&lt;a href=&quot;#Java实现DFA算法实现敏感词过滤&quot; class=&quot;headerlink&quot; title=&quot;Java实现DFA算法实现敏感词过滤&quot;&gt;&lt;/a&gt;Java实现DFA算法实现敏感词过滤&lt;/h2&gt;&lt;h3 id=&quot;今
+    
+    </summary>
+    
+      <category term="java" scheme="http://shannanhong.github.io/categories/java/"/>
+    
+    
+      <category term="算法" scheme="http://shannanhong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java的优势</title>
+    <link href="http://shannanhong.github.io/2016/03/09/java%20advantage/"/>
+    <id>http://shannanhong.github.io/2016/03/09/java advantage/</id>
     <published>2016-03-09T12:28:39.000Z</published>
-    <updated>2016-03-09T12:53:14.000Z</updated>
+    <updated>2016-03-10T12:37:08.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;现实世界中正在用Java解决的难题&quot;&gt;&lt;a href=&quot;#现实世界中正在用Java解决的难题&quot; class=&quot;headerlink&quot; title=&quot;现实世界中正在用Java解决的难题&quot;&gt;&lt;/a&gt;现实世界中正在用Java解决的难题&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;服务器端、大数据、大型网站、Twitter后端就是使用Java语言。这些就是Java最耀眼的领域。物联网、Android移动平台，你可以使用同一种语言来编写移动端和大数据服务器。&lt;/li&gt;
@@ -57,8 +82,8 @@
   
   <entry>
     <title>我喜欢河妍秀</title>
-    <link href="http://shannanhong.github.io/2016/03/08/%E6%88%91%E5%96%9C%E6%AC%A2%E6%B2%B3%E5%A6%8D%E7%A7%80/"/>
-    <id>http://shannanhong.github.io/2016/03/08/我喜欢河妍秀/</id>
+    <link href="http://shannanhong.github.io/2016/03/08/Iloveyanxiu/"/>
+    <id>http://shannanhong.github.io/2016/03/08/Iloveyanxiu/</id>
     <published>2016-03-08T15:09:10.000Z</published>
     <updated>2016-03-08T15:11:25.000Z</updated>
     
@@ -80,8 +105,8 @@
   
   <entry>
     <title>Mou使用说明</title>
-    <link href="http://shannanhong.github.io/2016/03/07/Mou%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
-    <id>http://shannanhong.github.io/2016/03/07/Mou使用说明/</id>
+    <link href="http://shannanhong.github.io/2016/03/07/Mou%20explanation/"/>
+    <id>http://shannanhong.github.io/2016/03/07/Mou explanation/</id>
     <published>2016-03-07T03:40:36.000Z</published>
     <updated>2016-03-07T14:58:26.000Z</updated>
     
