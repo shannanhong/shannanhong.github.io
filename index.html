@@ -304,12 +304,14 @@
 
       
         
-          
-            <h2 id="Java实现DFA算法实现敏感词过滤"><a href="#Java实现DFA算法实现敏感词过滤" class="headerlink" title="Java实现DFA算法实现敏感词过滤"></a>Java实现DFA算法实现敏感词过滤</h2><h3 id="今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o-╯□╰-o，但是Google知道。"><a href="#今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o-╯□╰-o，但是Google知道。" class="headerlink" title="今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o(╯□╰)o，但是Google知道。"></a>今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o(╯□╰)o，但是Google知道。</h3><p>下面代码是用于加深理解</p>
+          <h2 id="Java实现DFA算法实现敏感词过滤"><a href="#Java实现DFA算法实现敏感词过滤" class="headerlink" title="Java实现DFA算法实现敏感词过滤"></a>Java实现DFA算法实现敏感词过滤</h2><h3 id="今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o-╯□╰-o，但是Google知道。"><a href="#今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o-╯□╰-o，但是Google知道。" class="headerlink" title="今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o(╯□╰)o，但是Google知道。"></a>今天要写一个文字过滤的东西，就是比较字符串里是否有敏感词汇，非常遗憾，我的意识里也没有哪个算法o(╯□╰)o，但是Google知道。</h3><p>下面代码是用于加深理解</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">读取敏感词库，将敏感词放入HashSet中，构建一个DFA算法模型：&lt;br&gt; </span><br><span class="line">    中 = &#123; </span><br><span class="line">         isEnd = 0 </span><br><span class="line">         国 = &#123;&lt;br&gt; </span><br><span class="line">              isEnd = 1 </span><br><span class="line">              人 = &#123;isEnd = 0 </span><br><span class="line">                   民 = &#123;isEnd = 1&#125; </span><br><span class="line">                   &#125; </span><br><span class="line">              男  = &#123; </span><br><span class="line">                     isEnd = 0 </span><br><span class="line">                      人 = &#123; </span><br><span class="line">                           isEnd = 1 </span><br><span class="line">                          &#125; </span><br><span class="line">                  &#125; </span><br><span class="line">              &#125;</span><br></pre></td></tr></table></figure>
-<p>(～﹃～)~zZ 明天再写。</p>
-
-          
+<p>(～﹃～)~zZ 明天再写。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/10/DFA-algorithm/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
