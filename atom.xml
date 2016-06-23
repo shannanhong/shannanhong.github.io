@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shannanhong.github.io/"/>
-  <updated>2016-06-08T15:27:51.000Z</updated>
+  <updated>2016-06-23T05:11:30.000Z</updated>
   <id>http://shannanhong.github.io/</id>
   
   <author>
@@ -20,17 +20,22 @@
     <link href="http://shannanhong.github.io/2016/06/02/linux-ftp/"/>
     <id>http://shannanhong.github.io/2016/06/02/linux-ftp/</id>
     <published>2016-06-02T08:10:06.000Z</published>
-    <updated>2016-06-08T15:27:51.000Z</updated>
+    <updated>2016-06-23T05:11:30.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;写写自己碰到的问题&quot;&gt;&lt;a href=&quot;#写写自己碰到的问题&quot; class=&quot;headerlink&quot; title=&quot;写写自己碰到的问题&quot;&gt;&lt;/a&gt;写写自己碰到的问题&lt;/h2&gt;&lt;p&gt;1.检查linux系统是否安装了vsftp（我当时的系统是CentOS 64位）&lt;br&gt;使用命令：&lt;code&gt;rpm -qa|grep vsftp&lt;/code&gt;&lt;br&gt;2.在yum源上查看可供下载的安装包&lt;br&gt;使用命令：&lt;code&gt;yum list vsftpd&lt;/code&gt;&lt;br&gt;我这里显示的是vsftpd.x86_64,下面安装要使用的&lt;br&gt;3.安装vsftpd软件&lt;br&gt;使用命令：&lt;code&gt;yum install vsftpd.x86_64&lt;/code&gt;&lt;br&gt;4.启动vsftpd服务&lt;br&gt;使用命令：&lt;code&gt;service vsftpd start&lt;/code&gt;&lt;br&gt;其他命令：  &lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;service vsftpd restart   //重启&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;service vsftpd reload   //重新加载服务配置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;service vsftpd stop    //停止&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;service vsftpd status //查看状态&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;这是在我windows的虚拟机上面安装的ftp==，现在用的mac，不方便截图，一开始我的主机死活连不上ftp，后来修改了linux的ip，然后网络改成桥接模式，但是还是失败，后来关闭了CentOS的防火墙就搞定了。  &lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;service iptables stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;我这里用的用得Apache Httpd访问的文件&lt;br&gt;访问的时候一直报没有权限，我尝试关闭SELinux&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;setenforce 0&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;关闭SELinux，问题解决&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;写写自己碰到的问题&quot;&gt;&lt;a href=&quot;#写写自己碰到的问题&quot; class=&quot;headerlink&quot; title=&quot;写写自己碰到的问题&quot;&gt;&lt;/a&gt;写写自己碰到的问题&lt;/h2&gt;&lt;p&gt;1.检查linux系统是否安装了vsftp（我当时的系统是CentOS 64位）&lt;b
+      &lt;h2 id=&quot;写写自己碰到的问题&quot;&gt;&lt;a href=&quot;#写写自己碰到的问题&quot; class=&quot;headerlink&quot; title=&quot;写写自己碰到的问题&quot;&gt;&lt;/a&gt;写写自己碰到的问题&lt;/h2&gt;&lt;p&gt;1.检查linux系统是否安装了vsftp（我当时的系统是CentOS 64位）&lt;br&gt;使用命令：&lt;code&gt;rpm -qa|grep vsftp&lt;/code&gt;&lt;br&gt;2.在yum源上查看可供下载的安装包&lt;br&gt;使用命令：&lt;code&gt;yum list vsftpd&lt;/code&gt;&lt;br&gt;我这里显示的是vsftpd.x86_64,下面安装要使用的&lt;br&gt;3.安装vsftpd软件&lt;br&gt;使用命令：&lt;code&gt;yum install vsftpd.x86_64&lt;/code&gt;&lt;br&gt;4.启动vsftpd服务&lt;br&gt;使用命令：&lt;code&gt;service vsftpd start&lt;/code&gt;&lt;br&gt;其他命令：  &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;service vsftpd restart   //重启&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;service vsftpd reload   //重新加载服务配置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;service vsftpd stop    //停止&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;service vsftpd status //查看状态&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
